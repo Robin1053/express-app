@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/* ================================
+   Fonts
+   ================================ */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&family=Sour+Gummy:ital,wdth,wght@0,100..125,100..900;1,100..125,100..900&display=swap");
+/* ================================
+   Material 3 Tonal Paletten (Pastell)
+   Seed / Brand: #6a93b0 (desaturiertes Blau)
+   Töne: 0–100 (M3)
+   ================================ */
+/* Material-Standard Fehlerpalette (pastellig im oberen Bereich) */
+/* ================================
+   Helper: Farbton aus Palette holen
+   ================================ */
+/* ================================
+   LIGHT THEME Tokens (Material 3)
+   ================================ */
+/* ================================
+   DARK THEME Tokens (Material 3)
+   ================================ */
+/* ================================
+   Optional: CSS-Variablen ausgeben
+   (praktisch für App-weite Nutzung)
+   ================================ */
+/* Aktivierung: Light als Default, Dark bei .dark am <html>-Element */
+:root {
+  --md-sys-color-primary: #577a91;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #d9eaf3;
+  --md-sys-color-on-primary-container: #102633;
+  --md-sys-color-secondary: #716275;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #f1e5f2;
+  --md-sys-color-on-secondary-container:#241b2a;
+  --md-sys-color-tertiary: #4f7468;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #d7f2e4;
+  --md-sys-color-on-tertiary-container: #0f281f;
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+  --md-sys-color-surface: #f8f9fb;
+  --md-sys-color-on-surface: #1a1c1e;
+  --md-sys-color-surface-variant: #dde5ee;
+  --md-sys-color-on-surface-variant: #40474d;
+  --md-sys-color-outline: #707880;
+  --md-sys-color-outline-variant: #c1c9d2;
+  --md-sys-color-background: #fbfcfe;
+  --md-sys-color-on-background: #1a1c1e;
+  --md-sys-color-inverse-surface: #2f3133;
+  --md-sys-color-inverse-on-surface: #eff1f3;
+  --md-sys-color-inverse-primary: #bed9e8;
+  --md-sys-color-surface-tint: #577a91;
+}
+
+:root.dark {
+  --md-sys-color-primary: #bed9e8;
+  --md-sys-color-on-primary: #274155;
+  --md-sys-color-primary-container: #3f5d73;
+  --md-sys-color-on-primary-container: #d9eaf3;
+  --md-sys-color-secondary: #dfcde1;
+  --md-sys-color-on-secondary: #3c2f43;
+  --md-sys-color-secondary-container: #56485d;
+  --md-sys-color-on-secondary-container:#f1e5f2;
+  --md-sys-color-tertiary: #b9e3d0;
+  --md-sys-color-on-tertiary: #214036;
+  --md-sys-color-tertiary-container: #375a4f;
+  --md-sys-color-on-tertiary-container: #d7f2e4;
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffdad6;
+  --md-sys-color-surface: #1a1c1e;
+  --md-sys-color-on-surface: #e1e3e6;
+  --md-sys-color-surface-variant: #40474d;
+  --md-sys-color-on-surface-variant: #c1c9d2;
+  --md-sys-color-outline: #8a929a;
+  --md-sys-color-outline-variant: #40474d;
+  --md-sys-color-background: #1a1c1e;
+  --md-sys-color-on-background: #e1e3e6;
+  --md-sys-color-inverse-surface: #e1e3e6;
+  --md-sys-color-inverse-on-surface: #2f3133;
+  --md-sys-color-inverse-primary: #577a91;
+  --md-sys-color-surface-tint: #bed9e8;
+}
+
+/* Beispiel-Nutzung */
+.button {
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: 1px solid var(--md-sys-color-outline);
+}
+
+.card {
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  box-shadow: 0 1px 0 0 var(--md-sys-color-outline-variant);
+}
+
+/* ================================
+   Font mixins & tokens
+   ================================ */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  padding: 0;
+}
+
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--md-sys-color-primary);
+}
+
+.login-form {
+  width: 500px;
+  height: 100%;
+}

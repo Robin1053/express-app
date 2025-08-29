@@ -1,0 +1,20 @@
+@use 'colors';
+@use 'fonts';
+
+
+body {
+  @include fonts.font-primary();
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  padding: 0;
+}
+
+.logo {
+  @include fonts.font-secondary(2.5rem);
+  color: var(--md-sys-color-primary);
+}
+
+.login-form{
+  width: 500px;
+  height: 100%;
+}

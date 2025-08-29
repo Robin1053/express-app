@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body {
+        background-color: var(--background-color);
+        font-family: Roboto, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .login-card {
+        background-color: var(--card-background);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+        max-width: 400px;
+      }
+
+      .login-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .form-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.25rem rgba(98, 0, 238, 0.25);
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #3700b3;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center">
+      <div class="login-card p-4">
+        <form action="/sign-in/passkey" method="post">
+          <h2 class="text-center mb-4" style="color: var(--text-color)">
+            Anmelden
+          </h2>
+
+          <div class="row g-2 mb-3">
+            <div
+              class="g_id_signin"
+              data-type="standard"
+              data-shape="pill"
+              data-theme="outline"
+              data-text="signin_with"
+              data-size="large"
+              data-logo_alignment="left"
+            ></div>
+            <div class="col-12 d-grid">
+              <button
+                id="passkey-button"
+                class="btn btn-primary"
+                style="background-color: #4caf50; border-color: #4caf50"
+                type="submit"
+              >
+                Mit Passkey anmelden
+              </button>
+            </div>
+          </div>
+
+          <hr class="my-4" />
+
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">E-Mail-Adresse</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                aria-describedby="emailHelp"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Passwort</label>
+              <input type="password" class="form-control" id="password" />
+            </div>
+            <div class="d-grid mb-3">
+              <button type="submit" class="btn btn-primary">Anmelden</button>
+            </div>
+          </form>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

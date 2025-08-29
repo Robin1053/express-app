@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://accounts.google.com/gsi/client" async></script>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/scss/style.css" />
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bundle.js"></script>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- body %>
+
+    <script>
+      // Die Google Client ID steht hier auf jeder Seite zur Verfügung
+      const GOOGLE_CLIENT_ID = "<%= googleClientId %>";
+
+      // Sie können die Initialisierung hier aufrufen oder in einer externen Datei
+      // basierend auf dieser Variable.
+      if (typeof google !== "undefined") {
+        google.accounts.id.initialize({
+          client_id: GOOGLE_CLIENT_ID,
+          callback: handleCredentialResponse,
+        });
+        google.accounts.id.prompt();
+
+        const parent = document.getElementById("google_btn");
+        google.accounts.id.renderButton(parent, { theme: "filled_blue" });
+        google.accounts.id.prompt();
+      }
+    </script>
+
+    <div
+      id="g_id_onload"
+      data-client_id="<%= googleClientId %>"
+      data-context="signin"
+      data-ux_mode="redirect"
+      data-login_uri="<%= GOOGLE_REDIRECT_URI %>"
+      data-itp_support="true"
+    ></div>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+@use "sass:map";
+
+
+
+/* ================================
+   Material 3 Tonal Paletten (Pastell)
+   Seed / Brand: #6a93b0 (desaturiertes Blau)
+   Töne: 0–100 (M3)
+   ================================ */
+
+$brand-primary: (
+  0:#000000, 10:#102633, 20:#274155, 30:#3f5d73, 40:#577a91,
+  50:#6a93b0, 60:#85abc6, 70:#a1c3da, 80:#bed9e8, 90:#d9eaf3,
+  95:#eef6fb, 98:#f8fbfe, 99:#fcfeff, 100:#ffffff
+);
+
+$brand-secondary: (
+  /* sanftes Lavendel – harmonisch zu #6a93b0 */
+  0:#000000, 10:#241b2a, 20:#3c2f43, 30:#56485d, 40:#716275,
+  50:#8c7c90, 60:#a796ab, 70:#c3b1c6, 80:#dfcde1, 90:#f1e5f2,
+  95:#f9f3fa, 98:#fefafd, 99:#fffeff, 100:#ffffff
+);
+
+$brand-tertiary: (
+  /* sanftes Mint/Teal – frischer Akzent */
+  0:#000000, 10:#0f281f, 20:#214036, 30:#375a4f, 40:#4f7468,
+  50:#679b8c, 60:#80b3a2, 70:#9bcbb9, 80:#b9e3d0, 90:#d7f2e4,
+  95:#ecfaf3, 98:#f7fefb, 99:#fbfffe, 100:#ffffff
+);
+
+$brand-neutral: (
+  /* neutrale Grauskalierung leicht blau-grau */
+  0:#000000, 10:#1a1c1e, 20:#2f3133, 30:#45474a, 40:#5c5f62,
+  50:#74777a, 60:#8e9194, 70:#a9acaf, 80:#c5c8cb, 90:#e1e3e6,
+  95:#eff1f3, 98:#f8f9fb, 99:#fbfcfe, 100:#ffffff
+);
+
+$brand-neutral-variant: (
+  0:#000000, 10:#171c20, 20:#2b3136, 30:#40474d, 40:#586068,
+  50:#707880, 60:#8a929a, 70:#a5adb6, 80:#c1c9d2, 90:#dde5ee,
+  95:#edf4fb, 98:#f7fbff, 99:#fafcff, 100:#ffffff
+);
+
+/* Material-Standard Fehlerpalette (pastellig im oberen Bereich) */
+$brand-error: (
+  0:#000000, 10:#410002, 20:#690005, 30:#93000a, 40:#ba1a1a,
+  50:#de3730, 60:#ff5449, 70:#ff897d, 80:#ffb4ab, 90:#ffdad6,
+  95:#ffecea, 98:#fff8f7, 99:#fffbff, 100:#ffffff
+);
+
+/* ================================
+   Helper: Farbton aus Palette holen
+   ================================ */
+
+@function tone($palette, $t) {
+  @return map.get($palette, $t);
+}
+
+/* ================================
+   LIGHT THEME Tokens (Material 3)
+   ================================ */
+$scheme-light: (
+  primary:               tone($brand-primary, 40),
+  on-primary:            tone($brand-primary, 100),
+  primary-container:     tone($brand-primary, 90),
+  on-primary-container:  tone($brand-primary, 10),
+
+  secondary:             tone($brand-secondary, 40),
+  on-secondary:          tone($brand-secondary, 100),
+  secondary-container:   tone($brand-secondary, 90),
+  on-secondary-container:tone($brand-secondary, 10),
+
+  tertiary:              tone($brand-tertiary, 40),
+  on-tertiary:           tone($brand-tertiary, 100),
+  tertiary-container:    tone($brand-tertiary, 90),
+  on-tertiary-container: tone($brand-tertiary, 10),
+
+  error:                 tone($brand-error, 40),
+  on-error:              tone($brand-error, 100),
+  error-container:       tone($brand-error, 90),
+  on-error-container:    tone($brand-error, 10),
+
+  surface:               tone($brand-neutral, 98),
+  on-surface:            tone($brand-neutral, 10),
+  surface-variant:       tone($brand-neutral-variant, 90),
+  on-surface-variant:    tone($brand-neutral-variant, 30),
+
+  outline:               tone($brand-neutral-variant, 50),
+  outline-variant:       tone($brand-neutral-variant, 80),
+
+  background:            tone($brand-neutral, 99),
+  on-background:         tone($brand-neutral, 10),
+
+  inverse-surface:       tone($brand-neutral, 20),
+  inverse-on-surface:    tone($brand-neutral, 95),
+  inverse-primary:       tone($brand-primary, 80),
+
+  surface-tint:          tone($brand-primary, 40),
+);
+
+/* ================================
+   DARK THEME Tokens (Material 3)
+   ================================ */
+$scheme-dark: (
+  primary:               tone($brand-primary, 80),
+  on-primary:            tone($brand-primary, 20),
+  primary-container:     tone($brand-primary, 30),
+  on-primary-container:  tone($brand-primary, 90),
+
+  secondary:             tone($brand-secondary, 80),
+  on-secondary:          tone($brand-secondary, 20),
+  secondary-container:   tone($brand-secondary, 30),
+  on-secondary-container:tone($brand-secondary, 90),
+
+  tertiary:              tone($brand-tertiary, 80),
+  on-tertiary:           tone($brand-tertiary, 20),
+  tertiary-container:    tone($brand-tertiary, 30),
+  on-tertiary-container: tone($brand-tertiary, 90),
+
+  error:                 tone($brand-error, 80),
+  on-error:              tone($brand-error, 20),
+  error-container:       tone($brand-error, 30),
+  on-error-container:    tone($brand-error, 90),
+
+  surface:               tone($brand-neutral, 10),
+  on-surface:            tone($brand-neutral, 90),
+  surface-variant:       tone($brand-neutral-variant, 30),
+  on-surface-variant:    tone($brand-neutral-variant, 80),
+
+  outline:               tone($brand-neutral-variant, 60),
+  outline-variant:       tone($brand-neutral-variant, 30),
+
+  background:            tone($brand-neutral, 10),
+  on-background:         tone($brand-neutral, 90),
+
+  inverse-surface:       tone($brand-neutral, 90),
+  inverse-on-surface:    tone($brand-neutral, 20),
+  inverse-primary:       tone($brand-primary, 40),
+
+  surface-tint:          tone($brand-primary, 80),
+);
+
+/* ================================
+   Optional: CSS-Variablen ausgeben
+   (praktisch für App-weite Nutzung)
+   ================================ */
+
+@mixin export-css-vars($scheme) {
+  --md-sys-color-primary:               #{map.get($scheme, primary)};
+  --md-sys-color-on-primary:            #{map.get($scheme, on-primary)};
+  --md-sys-color-primary-container:     #{map.get($scheme, primary-container)};
+  --md-sys-color-on-primary-container:  #{map.get($scheme, on-primary-container)};
+
+  --md-sys-color-secondary:             #{map.get($scheme, secondary)};
+  --md-sys-color-on-secondary:          #{map.get($scheme, on-secondary)};
+  --md-sys-color-secondary-container:   #{map.get($scheme, secondary-container)};
+  --md-sys-color-on-secondary-container:#{map.get($scheme, on-secondary-container)};
+
+  --md-sys-color-tertiary:              #{map.get($scheme, tertiary)};
+  --md-sys-color-on-tertiary:           #{map.get($scheme, on-tertiary)};
+  --md-sys-color-tertiary-container:    #{map.get($scheme, tertiary-container)};
+  --md-sys-color-on-tertiary-container: #{map.get($scheme, on-tertiary-container)};
+
+  --md-sys-color-error:                 #{map.get($scheme, error)};
+  --md-sys-color-on-error:              #{map.get($scheme, on-error)};
+  --md-sys-color-error-container:       #{map.get($scheme, error-container)};
+  --md-sys-color-on-error-container:    #{map.get($scheme, on-error-container)};
+
+  --md-sys-color-surface:               #{map.get($scheme, surface)};
+  --md-sys-color-on-surface:            #{map.get($scheme, on-surface)};
+  --md-sys-color-surface-variant:       #{map.get($scheme, surface-variant)};
+  --md-sys-color-on-surface-variant:    #{map.get($scheme, on-surface-variant)};
+  --md-sys-color-outline:               #{map.get($scheme, outline)};
+  --md-sys-color-outline-variant:       #{map.get($scheme, outline-variant)};
+
+  --md-sys-color-background:            #{map.get($scheme, background)};
+  --md-sys-color-on-background:         #{map.get($scheme, on-background)};
+
+  --md-sys-color-inverse-surface:       #{map.get($scheme, inverse-surface)};
+  --md-sys-color-inverse-on-surface:    #{map.get($scheme, inverse-on-surface)};
+  --md-sys-color-inverse-primary:       #{map.get($scheme, inverse-primary)};
+  --md-sys-color-surface-tint:          #{map.get($scheme, surface-tint)};
+}
+
+/* Aktivierung: Light als Default, Dark bei .dark am <html>-Element */
+:root { @include export-css-vars($scheme-light); }
+:root.dark { @include export-css-vars($scheme-dark); }
+
+/* Beispiel-Nutzung */
+.button {
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: 1px solid var(--md-sys-color-outline);
+}
+.card {
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  box-shadow: 0 1px 0 0 var(--md-sys-color-outline-variant);
+}
+
+

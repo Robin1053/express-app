@@ -1,0 +1,162 @@
+# TypeScript
+dist/
+*.tsbuildinfo
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.staging
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+dev.db*
+
+# Prisma
+prisma/dev.db*
+prisma/migrations/migration_lock.toml
+
+# Compiled CSS from SASS
+public/css/
+*.css.map
+
+# SASS cache
+.sass-cache/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Build outputs
+dist/
+build/
+public/build/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Temporary folders
+tmp/
+temp/
+
+# Upload directories
+uploads/
+public/uploads/
+
+# SSL certificates
+*.pem
+*.key
+*.cert
+
+# Session store
+sessions/
+
+# Cache
+.cache/
+*.tsbuildinfo
+
+# Rollup build
+rollup.config.js.map
+
+# Testing
+coverage/
+.nyc_output/
+test-results/
+
+# Backup files
+*.backup
+*.bak
+*.tmp
